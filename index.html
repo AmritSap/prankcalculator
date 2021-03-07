@@ -59,9 +59,11 @@
             btn.innerText = " ON";
             textToDisplay = "";
             buttons.forEach((btn) => {
-              btn.addEventListener("click", () => {
-                buttons.disabled = true;
-              });
+              if (btn.innerText === "ON") {
+                btn.disabled = false;
+              } else {
+                btn.disabled = true;
+              }
             });
             return display(textToDisplay);
           }
@@ -70,6 +72,10 @@
             dark.style.backgroundColor = "";
             btn.innerText = " OFF";
             textToDisplay = "";
+            buttons.forEach((btn) => {
+              btn.disabled = false;
+            });
+            btn.disabled = false;
             return display(textToDisplay);
           }
 
