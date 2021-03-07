@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <div class="calculator">
+      <div class="display">
+        <input type="" id="result" value="0" />
+      </div>
+
+      <div class="keys">
+        <button value="1" class="item1">1</button>
+        <button value="2" class="item2">2</button>
+        <button value="3" class="item3">3</button>
+        <button value="+" class="itemplus">+</button>
+        <button value="4" class="item4">4</button>
+        <button value="5" class="item5">5</button>
+        <button value="6" class="item6">6</button>
+        <button value="-" class="itemminus">-</button>
+        <button value="7" class="item7">7</button>
+        <button value="8" class="item8">8</button>
+        <button value="9" class="item9">9</button>
+        <button value="*" class="itemmult">*</button>
+
+        <button value="0" class="item0">0</button>
+        <button value="." class="itemdot">.</button>
+        <button value="C" class="itemC">C</button>
+        <button value="=" class="itemequals">=</button>
+        <button value="AC" class="item1">AC</button>
+        <button value="off" class="itemoff">OFF</button>
+      </div>
+    </div>
+    <script>
+      let textToDisplay = "";
+      const buttons = document.querySelectorAll("button");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (btn.innerText === "AC") {
+            textToDisplay = "";
+            return display(textToDisplay);
+          }
+          if (btn.innerText === "=") {
+            return onTotal();
+          }
+          if (btn.innerText === "C") {
+            textToDisplay = textToDisplay.slice(0, -1);
+            return display(textToDisplay);
+          }
+          if (btn.innerText === "OFF") {
+            const dark = document.getElementById("result");
+            dark.style.backgroundColor = "black";
+            btn.innerText = " ON";
+            textToDisplay = "";
+            buttons.forEach((btn) => {
+              btn.addEventListener("click", () => {
+                buttons.disabled = true;
+              });
+            });
+            return display(textToDisplay);
+          }
+          if (btn.innerText === "ON") {
+            const dark = document.getElementById("result");
+            dark.style.backgroundColor = "";
+            btn.innerText = " OFF";
+            textToDisplay = "";
+            return display(textToDisplay);
+          }
+
+          // grab the value from button
+          textToDisplay += btn.innerText;
+          display(textToDisplay);
+        });
+      });
+      const display = (toDisplay) => {
+        document.getElementById("result").value = toDisplay;
+      };
+
+      const onTotal = () => {
+        // do total and dsplay on the screee
+        const subTotal = eval(textToDisplay);
+        const total = subTotal + randomVal();
+        display(total);
+        textToDisplay = "";
+      };
+
+      // create a random number
+      const randomVal = () => {
+        //random()-> 0-0.9999999
+        const random = Math.floor(Math.random() * 10) + 1;
+        console.log(random);
+        return random <= 3 ? random : 0;
+      };
+    </script>
+  </body>
+</html>

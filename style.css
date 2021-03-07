@@ -1,0 +1,151 @@
+.keys {
+  background-color: blue;
+  height: 300px;
+  width: 300px;
+  border: red;
+  border-style: solid;
+  border-width: 2px;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.calculator {
+  display: grid;
+  grid-template-row: 1fr 1fr;
+  grid-row-gap: 10px;
+  justify-content: center;
+}
+
+#result {
+  color: red;
+  border-radius: 5px;
+  width: 300px;
+  height: 75px;
+  border-style: solid;
+  font-size: 50px;
+  text-align: end;
+}
+.item1 {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.item2 {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.item3 {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.itemplus {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.item5 {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.item4 {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.item6 {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.itemminus {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.item7 {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.item8 {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.item9 {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.itemmult {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.item0 {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.itemC {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  background-color: red;
+}
+.itemequals {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  background-color: black;
+  color: blanchedalmond;
+}
+.itemdot {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.itemoff {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
